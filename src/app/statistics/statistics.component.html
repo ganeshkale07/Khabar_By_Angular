@@ -1,0 +1,9 @@
+<div class="container">
+  <p
+    *ngFor="let user of userList"
+    [style.fontSize.px]="20"
+    [ngClass]="{ 'text-success': user.age <= 25, 'text-danger': user.age > 25 }"
+  >
+    {{ user.firstName }}
+  </p>
+</div>

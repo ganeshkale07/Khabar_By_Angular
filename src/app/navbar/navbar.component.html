@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" [routerLink]="['Khabar', 'all']">Khabar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mynavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link"
+            [routerLink]="['Khabar', 'world']"
+            routerLinkActive="active"
+            >World</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link"
+            [routerLink]="['Khabar', 'sport']"
+            routerLinkActive="active"
+            >Sport</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link"
+            [routerLink]="['Khabar', 'economy']"
+            routerLinkActive="active"
+            >Economy</a
+          >
+        </li>
+        <li class="nav-item mx-3">
+          <a
+            class="nav-link"
+            [routerLink]="['Khabar', 'fitness']"
+            routerLinkActive="active"
+            >Fitness</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="text"
+          placeholder="Search"
+          [(ngModel)]="userSearch"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <button
+          class="btn btn-dark"
+          style="border: 1px solid white"
+          type="button"
+          [routerLink]="['Khabar', userSearch]"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
