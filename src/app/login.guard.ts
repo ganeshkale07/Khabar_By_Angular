@@ -15,7 +15,7 @@ export class LoginGuard implements CanActivate {
     }
     else{
       alert("Login Credentials not correct!");
-      document.location.href = 'http://localhost:4200/Khabar/sign-in';
+      document.location.href = location.origin + '/Khabar/sign-in';     
       return false;
     }
   }
