@@ -50,7 +50,6 @@ const routes: Routes = [
     canActivate : [LoginGuard]  
 
   },
-
   {
     path:'statistics',
     component : StatisticsComponent,
